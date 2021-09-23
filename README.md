@@ -1,22 +1,20 @@
-# NextJS Boilerplate
+# My Work
 
-This is a simple boilerplate with TypeScript, React, NextJS and Styled Components.
+This project is online at [jorb.dev](jorb.dev)
 
-## Create your Own Project
+Build using a simple boilerplate with TypeScript, React, NextJS and Styled Components.
 
-<p align="center">
-  <img height="300" src="https://media.giphy.com/media/WXraj8aJHXUP7kRDbJ/giphy.gif" />
-</p>
+Boiilerplate avalible on [helderburato/nextjs-boilerplate](https://github.com/helderburato/nextjs-boilerplate)
 
-Execute the following command to create your project:
+## What it works for
 
-```bash
-npx create-next-app -e https://github.com/helderburato/nextjs-boilerplate
+This project runs a website build to display some project that I build or worked on.
 
-# or
+I decide to put this online on an personal website just to make it easier to send 
+to people on short and more friendly url's,
 
-yarn create next-app -e https://github.com/helderburato/nextjs-boilerplate
-```
+But once it's been done I shall probabily improve it a lot as a project it self 
+and use to centralize the pratice of new libraries and techniques in the future.
 
 ## Getting Started
 
@@ -28,25 +26,4 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Them it will be online at [http://localhost:3000/](http://localhost:3000/)

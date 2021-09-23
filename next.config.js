@@ -1,9 +1,21 @@
-const withPWA = require('next-pwa')
-const isProd = process.env.NODE_ENV === 'production'
-
-module.exports = withPWA({
-  pwa: {
-    dest: 'public',
-    disable: !isProd,
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/FD',
+        destination: '/foodzilla-dashboard',
+        permanent: true,
+      },
+      {
+        source: '/FL',
+        destination: '/foodzilla-landingpage',
+        permanent: true,
+      },
+      {
+        source: '/BF',
+        destination: '/chat-dashboard',
+        permanent: true,
+      },
+    ]
   },
-})
+}
