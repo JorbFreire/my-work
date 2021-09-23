@@ -14,9 +14,8 @@ export const MainBlock = styled.div`
 `
 
 export const Slider = styled.section`
-  background-color: #75adc7;
-  width: 512px;
-  height: 384px;
+  width: 88%;
+  max-width: 1200px;
 `
 
 export const MainTextContainer = styled.div`
@@ -52,4 +51,9 @@ export const Description = styled.p`
   width: 100%;
   max-width: 864px;
   font-size: 1.6rem;
+`
+
+export const SlideImageWrapper = styled.div`
+  width: 100%;
+  max-height: 600px;
 `

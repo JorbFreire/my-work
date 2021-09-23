@@ -13,6 +13,8 @@ import {
   Description,
 } from './styles'
 
+import { SlideImage } from './SlideImageWithWrapper'
+
 interface StaticRequire {
   default: StaticImageData
 }
@@ -34,7 +36,7 @@ interface Main {
   links?: Array<Link>
 }
 
-const Main = ({
+const Project = ({
   title = 'Project Title',
   description = 'Project Description',
   previews,
@@ -44,21 +46,22 @@ const Main = ({
     <MainBlock>
       <Slider className="slide-container">
         <Slide indicators={true}>
-          <div className="each-slide">
-            {previews.map(({ type, content }, index) =>
-              type === 'video' ? (
+          {previews.map(({ type, content }, index) =>
+            type === 'video' ? (
+              <div className="each-slide">
                 <h1>video</h1>
-              ) : (
-                <Image
+              </div>
+            ) : (
+              <div className="each-slide">
+                <SlideImage
                   key={index}
                   src={content}
                   alt="Picture of the author"
-                  width={512}
-                  height={384}
+                  layout="responsive"
                 />
-              ),
-            )}
-          </div>
+              </div>
+            ),
+          )}
         </Slide>
       </Slider>
 
@@ -79,4 +82,4 @@ const Main = ({
   </Container>
 )
 
-export default Main
+export default Project
