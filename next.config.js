@@ -3,19 +3,27 @@ module.exports = {
     return [
       {
         source: '/FD',
-        destination: '/foodzilla-dashboard',
+        destination: '/project/foodzilla-dashboard',
         permanent: true,
       },
       {
         source: '/FL',
-        destination: '/foodzilla-landingpage',
+        destination: '/project/foodzilla-landingpage',
         permanent: true,
       },
       {
         source: '/BF',
-        destination: '/chat-dashboard',
+        destination: '/project/chat-dashboard',
         permanent: true,
       },
     ]
+  },
+  images: {
+    domains: [
+      'beatforbeat.com.br',
+      'img.elo7.com.br',
+      's2.glbimg.com',
+      'lojasantoantonio.vteximg.com.br',
+    ],
   },
 }
