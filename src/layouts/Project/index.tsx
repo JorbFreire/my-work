@@ -1,10 +1,11 @@
-import Image from 'next/image'
+import React from 'react'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
 import {
   Container,
   Slider,
+  EachSlide,
   MainBlock,
   MainTextContainer,
   Title,
@@ -34,6 +35,7 @@ interface Main {
   description: string
   previews: Array<PreviewImage>
   links?: Array<Link>
+  children?: JSX.Element | JSX.Element[]
 }
 
 const Project = ({
@@ -41,6 +43,7 @@ const Project = ({
   description = 'Project Description',
   previews,
   links,
+  children,
 }: Main) => (
   <Container>
     <MainBlock>
@@ -52,21 +55,21 @@ const Project = ({
                 <h1>video</h1>
               </div>
             ) : (
-              <div className="each-slide">
+              <EachSlide className="each-slide">
                 <SlideImage
                   key={index}
                   src={content}
                   alt="Picture of the author"
                   layout="responsive"
                 />
-              </div>
+              </EachSlide>
             ),
           )}
         </Slide>
       </Slider>
 
       <MainTextContainer>
-        <Title>{title}</Title>
+        <Title>{children ? children : title}</Title>
         <ProjectLinks>
           {links &&
             links.map(({ name, url }) => (

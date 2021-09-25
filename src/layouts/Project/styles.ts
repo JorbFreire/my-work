@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
-  background-color: #c79961;
+  background-color: #75adc761;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,17 @@ export const MainBlock = styled.div`
 `
 
 export const Slider = styled.section`
-  width: 88%;
+  height: 49.5vw;
+  width: 80vw;
+  max-height: 675px;
+  max-width: 1200px;
+`
+
+export const EachSlide = styled.div`
+  display: flex;
+  height: 49.5vw;
+  width: 80vw;
+  max-height: 675px;
   max-width: 1200px;
 `
 
@@ -22,11 +32,12 @@ export const MainTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 12px;
+  width: 18vw;
+  padding: 24px;
 `
 
 export const Title = styled.h1`
-  font-size: 2.6rem;
+  font-size: 4.2rem;
   margin-top: -16px;
 `
 
@@ -47,13 +58,18 @@ export const ProjectLink = styled.a`
 `
 
 export const Description = styled.p`
-  margin-top: 16px;
-  width: 100%;
-  max-width: 864px;
+  width: calc(80vw + 15vw);
+  max-width: calc(1200px + 15vw);
+  margin-top: 40px;
   font-size: 1.6rem;
 `
 
 export const SlideImageWrapper = styled.div`
-  width: 100%;
-  max-height: 600px;
+  img,
+  div {
+    height: 49.5vw !important;
+    width: 80vw !important;
+    max-height: 675px !important;
+    max-width: 1200px !important;
+  }
 `

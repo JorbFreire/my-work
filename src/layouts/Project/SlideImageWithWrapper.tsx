@@ -14,6 +14,6 @@ interface ImageProps {
 
 export const SlideImage = (props: ImageProps) => (
   <SlideImageWrapper>
-    <Image {...props} />
+    <Image {...props} height="100%" objectFit="contain" />
   </SlideImageWrapper>
 )

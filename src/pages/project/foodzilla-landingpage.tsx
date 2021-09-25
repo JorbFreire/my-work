@@ -83,10 +83,16 @@ export default function Home() {
 
   return (
     <Project
-      title="Foodzilla &#10;&#13;landing page"
+      title={''}
       description="This project was build to foodzilla"
       previews={previewImages}
       links={mockedLinks}
-    />
+    >
+      <p>
+        Foodzilla
+        <br />
+        landing page
+      </p>
+    </Project>
   )
 }
