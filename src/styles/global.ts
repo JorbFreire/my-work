@@ -29,6 +29,18 @@ const GlobalStyles = createGlobalStyle`
   a, button {
     cursor: pointer;
   }
+
+  @media (max-width: 1440px) {
+    html {
+      font-size: 47%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    html {
+      font-size: 40%;
+    }
+  }
 `
 
 export default GlobalStyles

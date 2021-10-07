@@ -1,45 +1,85 @@
 import styled from 'styled-components'
 
-const sliderHeight = '49.5vw'
-const sliderMaxHeight = '675px'
-
 interface SliderButtonProps {
   side?: 'prev' | 'next'
 }
+
+const sliderWidth = 70
+const sliderMaxWidth = 1400
+const sliderHeight = sliderWidth * 0.5625
+const sliderMaxHeight = sliderMaxWidth * 0.5625
 
 export const Container = styled.main`
   background-color: #75adc761;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
+
+  overflow: auto;
+  padding: 20px 80px 0;
+  @media (min-width: 2400px) {
+    padding: 40px 320px 0;
+  }
+  @media (max-width: 1920px) {
+    padding: 40px 80px 0;
+  }
+  @media (max-width: 1600px) {
+    padding: 20px 40px 0;
+  }
+  @media (max-width: 700px) {
+    padding: 0 20px 0;
+  }
 `
 
 export const MainBlock = styled.div`
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Slider = styled.section`
-  height: ${sliderHeight};
-  width: 80vw;
-  max-height: ${sliderMaxHeight};
-  max-width: 1200px;
+  --slider-width: ${sliderWidth}vw;
+  --slider-max-width: ${sliderMaxWidth}px;
+  --slider-height: ${sliderHeight}vw;
+  --slider-max-height: ${sliderMaxHeight}px;
+
+  height: var(--slider-height);
+  width: var(--slider-width);
+  max-height: var(--slider-max-height);
+  max-width: var(--slider-max-width);
+
+  @media (max-width: 1920px) {
+    --slider-width: ${sliderWidth * 0.96}vw;
+    --slider-height: ${sliderHeight * 0.96}vw;
+  }
+  @media (max-width: 1024px) {
+    --slider-width: ${sliderWidth * 0.82}vw;
+    --slider-height: ${sliderHeight * 0.82}vw;
+  }
+  @media (max-width: 700px) {
+    --slider-width: ${sliderWidth * 1.2}vw;
+    --slider-height: ${sliderHeight * 1.2}vw;
+  }
 `
 
 export const EachSlide = styled.div`
   display: flex;
-  height: ${sliderHeight};
-  width: 80vw;
-  max-height: ${sliderMaxHeight};
-  max-width: 1200px;
+  height: var(--slider-height);
+  width: var(--slider-width);
+  max-height: var(--slider-max-height);
+  max-width: var(--slider-max-width);
 `
 
 export const SlideButton = styled.button<SliderButtonProps>`
   width: 55px;
   height: auto;
-  height: ${sliderHeight};
-  max-height: ${sliderMaxHeight};
+  height: var(--slider-height);
+  max-height: var(--slider-max-height);
 
   background: none;
   border: none;
@@ -65,14 +105,29 @@ export const MainTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 18vw;
-  padding: 24px;
+  width: 22%;
+
+  @media (max-width: 1024px) {
+    width: 32%;
+  }
+  @media (max-width: 700px) {
+    --slider-width: ${sliderWidth * 1.2}vw;
+    --slider-height: ${sliderHeight * 1.2}vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0 20px;
+  }
 `
 
 export const Title = styled.h1`
   font-size: 4.2rem;
   margin-top: -16px;
   color: #2a373c;
+  @media (max-width: 700px) {
+    margin-top: 0;
+  }
 `
 
 export const ProjectLinks = styled.section`
@@ -92,8 +147,7 @@ export const ProjectLink = styled.a`
 `
 
 export const Description = styled.p`
-  width: calc(80vw + 15vw);
-  max-width: calc(1200px + 15vw);
+  width: 100%;
   margin-top: 40px;
   font-size: 1.6rem;
   color: #212121;
@@ -106,9 +160,9 @@ export const Description = styled.p`
 export const SlideImageWrapper = styled.div`
   img,
   div {
-    height: ${sliderHeight} !important;
-    width: 80vw !important;
-    max-height: ${sliderMaxHeight} !important;
-    max-width: 1200px !important;
+    height: var(--slider-height) !important;
+    width: var(--slider-width) !important;
+    max-height: var(--slider-max-height) !important;
+    max-width: var(--slider-max-width) !important;
   }
 `
