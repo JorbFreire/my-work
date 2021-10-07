@@ -22,7 +22,7 @@ export const Slider = styled.section`
 
 export const EachSlide = styled.div`
   display: flex;
-  height: 49.5vw;rgb(94, 119, 130)
+  height: 49.5vw;
   width: 80vw;
   max-height: 675px;
   max-width: 1200px;
