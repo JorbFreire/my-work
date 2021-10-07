@@ -1,11 +1,15 @@
 import React from 'react'
+import Image from 'next/image'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
+
+import arrowIcon from '../../assets/icons/arrow.svg'
 
 import {
   Container,
   Slider,
   EachSlide,
+  SlideButton,
   MainBlock,
   MainTextContainer,
   Title,
@@ -60,7 +64,19 @@ const Project = ({
       </MainTextContainer>
 
       <Slider className="slide-container">
-        <Slide indicators={true}>
+        <Slide
+          prevArrow={
+            <SlideButton side="prev">
+              <Image src={arrowIcon} />
+            </SlideButton>
+          }
+          nextArrow={
+            <SlideButton side="next">
+              <Image src={arrowIcon} />
+            </SlideButton>
+          }
+          indicators={true}
+        >
           {previews.map(({ type, content }, index) =>
             type === 'video' ? (
               <div className="each-slide">

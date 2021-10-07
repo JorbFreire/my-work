@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+const sliderHeight = '49.5vw'
+const sliderMaxHeight = '675px'
+
+interface SliderButtonProps {
+  side?: 'prev' | 'next'
+}
+
 export const Container = styled.main`
   background-color: #75adc761;
   display: flex;
@@ -14,18 +21,44 @@ export const MainBlock = styled.div`
 `
 
 export const Slider = styled.section`
-  height: 49.5vw;
+  height: ${sliderHeight};
   width: 80vw;
-  max-height: 675px;
+  max-height: ${sliderMaxHeight};
   max-width: 1200px;
 `
 
 export const EachSlide = styled.div`
   display: flex;
-  height: 49.5vw;
+  height: ${sliderHeight};
   width: 80vw;
-  max-height: 675px;
+  max-height: ${sliderMaxHeight};
   max-width: 1200px;
+`
+
+export const SlideButton = styled.button<SliderButtonProps>`
+  width: 55px;
+  height: auto;
+  height: ${sliderHeight};
+  max-height: ${sliderMaxHeight};
+
+  background: none;
+  border: none;
+
+  ${({ side }) => (side === 'prev' ? 'margin-right' : 'margin-left')}: -55px;
+
+  transition: box-shadow 0.3s;
+  border-radius: ${({ side }) =>
+    side === 'prev' ? '20px 0 0 20px' : '0 20px 20px 0'};
+  :hover {
+    box-shadow: inset ${({ side }) => (side === 'prev' ? '50px' : '-50px')} 0px
+      50px -30px rgba(255, 255, 255, 0.61);
+  }
+
+  img {
+    border-radius: 50%;
+    height: 45px;
+    transform: rotate(${({ side }) => (side === 'prev' ? '180deg' : '0deg')});
+  }
 `
 
 export const MainTextContainer = styled.div`
@@ -39,7 +72,7 @@ export const MainTextContainer = styled.div`
 export const Title = styled.h1`
   font-size: 4.2rem;
   margin-top: -16px;
-  color: #263f4a;
+  color: #2a373c;
 `
 
 export const ProjectLinks = styled.section`
@@ -73,9 +106,9 @@ export const Description = styled.p`
 export const SlideImageWrapper = styled.div`
   img,
   div {
-    height: 49.5vw !important;
+    height: ${sliderHeight} !important;
     width: 80vw !important;
-    max-height: 675px !important;
+    max-height: ${sliderMaxHeight} !important;
     max-width: 1200px !important;
   }
 `

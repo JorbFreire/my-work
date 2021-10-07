@@ -1,17 +1,17 @@
 import Project from 'layouts/Project'
 
-import chat from '../../assets/chat.png'
-import chat2 from '../../assets/chat2.png'
-import criar_item from '../../assets/criar_item.png'
-import editar_item from '../../assets/editar_item.png'
-import impressao from '../../assets/impressao.png'
-import menu_e_timer from '../../assets/menu_e_timer.png'
-import menu from '../../assets/menu.png'
-import pedido from '../../assets/pedido.png'
+import chat from '../../assets/jobs/foodzilla-dashboard/chat.png'
+import chat2 from '../../assets/jobs/foodzilla-dashboard/chat2.png'
+import criar_item from '../../assets/jobs/foodzilla-dashboard/criar_item.png'
+import editar_item from '../../assets/jobs/foodzilla-dashboard/editar_item.png'
+import impressao from '../../assets/jobs/foodzilla-dashboard/impressao.png'
+import menu_e_timer from '../../assets/jobs/foodzilla-dashboard/menu_e_timer.png'
+import menu from '../../assets/jobs/foodzilla-dashboard/menu.png'
+import pedido from '../../assets/jobs/foodzilla-dashboard/pedido.png'
 
-import criar_produto from '../../assets/gifs/criar_produto.gif'
-import mobile_menu from '../../assets/gifs/mobile_menu.gif'
-import mobile_pedido from '../../assets/gifs/mobile_pedido.gif'
+import criar_produto from '../../assets/jobs/foodzilla-dashboard/gifs/criar_produto.gif'
+import mobile_menu from '../../assets/jobs/foodzilla-dashboard/gifs/mobile_menu.gif'
+import mobile_pedido from '../../assets/jobs/foodzilla-dashboard/gifs/mobile_pedido.gif'
 
 interface StaticRequire {
   default: StaticImageData
