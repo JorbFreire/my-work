@@ -47,6 +47,18 @@ const Project = ({
 }: Main) => (
   <Container>
     <MainBlock>
+      <MainTextContainer>
+        <Title>{children ? children : title}</Title>
+        <ProjectLinks>
+          {links &&
+            links.map(({ name, url }) => (
+              <ProjectLink key={name} href={url}>
+                {url}
+              </ProjectLink>
+            ))}
+        </ProjectLinks>
+      </MainTextContainer>
+
       <Slider className="slide-container">
         <Slide indicators={true}>
           {previews.map(({ type, content }, index) =>
@@ -67,18 +79,6 @@ const Project = ({
           )}
         </Slide>
       </Slider>
-
-      <MainTextContainer>
-        <Title>{children ? children : title}</Title>
-        <ProjectLinks>
-          {links &&
-            links.map(({ name, url }) => (
-              <ProjectLink key={name} href={url}>
-                {url}
-              </ProjectLink>
-            ))}
-        </ProjectLinks>
-      </MainTextContainer>
     </MainBlock>
 
     <Description>{description}</Description>

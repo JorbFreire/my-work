@@ -22,7 +22,7 @@ export const Slider = styled.section`
 
 export const EachSlide = styled.div`
   display: flex;
-  height: 49.5vw;
+  height: 49.5vw;rgb(94, 119, 130)
   width: 80vw;
   max-height: 675px;
   max-width: 1200px;
@@ -39,6 +39,7 @@ export const MainTextContainer = styled.div`
 export const Title = styled.h1`
   font-size: 4.2rem;
   margin-top: -16px;
+  color: #263f4a;
 `
 
 export const ProjectLinks = styled.section`
@@ -62,6 +63,11 @@ export const Description = styled.p`
   max-width: calc(1200px + 15vw);
   margin-top: 40px;
   font-size: 1.6rem;
+  color: #212121;
+
+  strong {
+    font-weight: 600;
+  }
 `
 
 export const SlideImageWrapper = styled.div`
