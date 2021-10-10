@@ -10,13 +10,18 @@ const sliderHeight = sliderWidth * 0.5625
 const sliderMaxHeight = sliderMaxWidth * 0.5625
 
 export const Container = styled.main`
-  background-color: #75adc761;
+  background-color: #2a373c;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
-
   overflow: auto;
+`
+
+export const BGImage = styled.div`
+  background: url('/img/backgrounds/waves_top.png') no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
   padding: 20px 80px 0;
   @media (min-width: 2400px) {
     padding: 40px 320px 0;
@@ -124,7 +129,7 @@ export const MainTextContainer = styled.div`
 export const Title = styled.h1`
   font-size: 4.2rem;
   margin-top: -16px;
-  color: #2a373c;
+  color: #f8a9b3;
   @media (max-width: 700px) {
     margin-top: 0;
   }
@@ -150,7 +155,8 @@ export const Description = styled.p`
   width: 100%;
   margin-top: 40px;
   font-size: 1.6rem;
-  color: #212121;
+  color: #fff;
+  margin-bottom: 20px;
 
   strong {
     font-weight: 600;

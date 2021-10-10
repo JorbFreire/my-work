@@ -1,6 +1,6 @@
 /* istanbul ignore file */
-import Main from 'components/Main'
+import Portifolio from 'layouts/Portifolio'
 
 export default function Home() {
-  return <Main />
+  return <Portifolio />
 }
