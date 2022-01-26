@@ -4,7 +4,7 @@ This project is online at [jorb.dev](https://jorb.dev/)
 
 Build using a simple boilerplate with TypeScript, React, NextJS and Styled Components.
 
-Boiilerplate avalible on [helderburato/nextjs-boilerplate](https://github.com/helderburato/nextjs-boilerplate)
+Boilerplate avalible on [helderburato/nextjs-boilerplate](https://github.com/helderburato/nextjs-boilerplate)
 
 ## What it works for
 
