@@ -14,7 +14,9 @@ to people on short and more friendly url's, but once it's been done I shall prob
 improve it a lot as a project it self and use to centralize the pratice of new 
 libraries and techniques in the future.
 
-## Getting Started
+## Wanna custom and use it for yourself?
+
+#### Getting Started
 
 First, run the development server:
 
