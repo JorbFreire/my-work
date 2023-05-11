@@ -9,7 +9,7 @@ interface ImageBoxProps {
 }
 
 export const Container = styled.div`
-  height: 917px;
+  height: 910px;
   background-color: #2a373c;
   box-shadow: 0px -15px 120px -15px rgba(0, 0, 0, 0.25);
 `
@@ -22,7 +22,7 @@ export const ImageBox = styled.main<ImageBoxProps>`
   width: 100%;
   padding: 0 269px;
 
-  background-image: url('/img/backgrounds/waves_top.png');
+  background-image: url('/backgrounds/waves_top.png');
   background-size: cover;
   background-attachment: fixed;
 `
@@ -37,7 +37,6 @@ export const HeadLine = styled.h1`
 `
 
 export const CallToAction = styled.h2<CallToActionProps>`
-  font-family: 'Gemunu Libre', 'Roboto', sans-serif;
   font-size: ${({ size }) => (size === 'large' ? 5.6 : 3.2)}rem;
   font-weight: 700;
   letter-spacing: 0.2em;

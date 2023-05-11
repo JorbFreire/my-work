@@ -17,17 +17,17 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
-  body {
+  body, input, button {
     font-family: -apple-system, 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 
-  input, button {
-    font-family: 'Roboto', sans-serif;
-  }
-
   a, button {
     cursor: pointer;
+  }
+
+  h2 {
+    font-family: 'Gemunu Libre', 'Roboto', sans-serif;
   }
 
   @media (max-width: 1440px) {

@@ -1,23 +1,29 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from 'assets/icons/logo.svg'
-import githubIcon from 'assets/icons/github.png'
 
 import {
   Container,
   GithubIconPositionBox,
   LogoPositionBox,
   ImageContainer,
+  LogoText,
   Nav,
   PageLink,
 } from './styles'
+
 export default function Navbar() {
   return (
     <Container>
       <LogoPositionBox>
         <ImageContainer size="large">
-          <Image src={logo} objectFit="contain" layout="responsive" />
+          <Image
+            src="/icons/logo.svg"
+            objectFit="contain"
+            width={92}
+            height={124}
+          />
         </ImageContainer>
+        <LogoText>Jorb.dev</LogoText>
       </LogoPositionBox>
 
       <Nav>
@@ -40,7 +46,7 @@ export default function Navbar() {
 
       <GithubIconPositionBox>
         <ImageContainer size="small">
-          <Image src={githubIcon} objectFit="contain" layout="responsive" />
+          {/* <Image src="/icons/githubIcon" objectFit="contain" layout="fill" /> */}
         </ImageContainer>
       </GithubIconPositionBox>
     </Container>
