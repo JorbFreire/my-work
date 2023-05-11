@@ -9,7 +9,7 @@ export default function Portifolio() {
         <Navbar />
         <div>
           <HeadLine>High quality websites {'&'} web apps</HeadLine>
-          <CallToAction>👇 CHECK OUT MY WORK.</CallToAction>
+          <CallToAction size="large">👇 CHECK OUT MY WORK.</CallToAction>
         </div>
 
         <div />
