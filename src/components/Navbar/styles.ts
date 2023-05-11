@@ -1,9 +1,5 @@
 import styled from 'styled-components'
 
-interface ImageContainerProps {
-  size: 'small' | 'large'
-}
-
 interface PageLinkProps {
   onPage: boolean
 }

@@ -22,7 +22,7 @@ export const ImageBox = styled.main<ImageBoxProps>`
   width: 100%;
   padding: 0 269px;
 
-  background-image: url('/backgrounds/waves_top.png');
+  background-image: url('/backgrounds/waves_bottom.png');
   background-size: cover;
   background-attachment: fixed;
 `
