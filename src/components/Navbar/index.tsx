@@ -5,7 +5,6 @@ import {
   Container,
   GithubIconPositionBox,
   LogoPositionBox,
-  ImageContainer,
   LogoText,
   Nav,
   PageLink,
@@ -15,14 +14,12 @@ export default function Navbar() {
   return (
     <Container>
       <LogoPositionBox>
-        <ImageContainer size="large">
-          <Image
-            src="/icons/logo.svg"
-            objectFit="contain"
-            width={92}
-            height={124}
-          />
-        </ImageContainer>
+        <Image
+          src="/icons/logo.svg"
+          objectFit="contain"
+          width={92}
+          height={124}
+        />
         <LogoText>Jorb.dev</LogoText>
       </LogoPositionBox>
 
@@ -45,9 +42,12 @@ export default function Navbar() {
       </Nav>
 
       <GithubIconPositionBox>
-        <ImageContainer size="small">
-          {/* <Image src="/icons/githubIcon" objectFit="contain" layout="fill" /> */}
-        </ImageContainer>
+        <Image
+          src="/icons/github.png"
+          objectFit="contain"
+          width={53}
+          height={53}
+        />
       </GithubIconPositionBox>
     </Container>
   )

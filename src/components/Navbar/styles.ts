@@ -17,6 +17,11 @@ export const Container = styled.header`
 
 export const GithubIconPositionBox = styled.div`
   position: absolute;
+  display: flex;
+  align-items: center;
+
+  height: 124px;
+  top: 66px;
   right: -80px;
 `
 
@@ -24,13 +29,6 @@ export const LogoPositionBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 66px;
-`
-
-// The images sizes at this navbar are controled on this component
-export const ImageContainer = styled.div<ImageContainerProps>`
-  display: block;
-  width: ${({ size }) => (size === 'large' ? 92 : 52)}px;
-  height: 100%;
 `
 
 export const LogoText = styled.h2`
