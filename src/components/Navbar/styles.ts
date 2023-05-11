@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 interface PageLinkProps {
   onPage: boolean
@@ -31,7 +32,7 @@ export const LogoText = styled.h2`
   font-weight: 700;
   font-size: 6.4rem;
   letter-spacing: 0.2em;
-  color: rgba(248, 169, 179, 0.67);
+  color: #f8a9b3;
   margin-left: 32px;
 `
 
@@ -41,7 +42,7 @@ export const Nav = styled.nav`
   margin-top: 66px;
 `
 
-export const PageLink = styled.a<PageLinkProps>`
+export const PageLink = styled(Link)<PageLinkProps>`
   font-size: 2.4rem;
   color: #fff;
   text-decoration: none !important;

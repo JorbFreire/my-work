@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 
 import {
@@ -14,40 +13,30 @@ export default function Navbar() {
   return (
     <Container>
       <LogoPositionBox>
-        <Image
-          src="/icons/logo.svg"
-          objectFit="contain"
-          width={92}
-          height={124}
-        />
+        <Image src="/icons/logo.svg" width={92} height={124} alt="logo" />
         <LogoText>Jorb.dev</LogoText>
       </LogoPositionBox>
 
       <Nav>
-        <Link href="/">
-          <PageLink onPage={true}>Portifolio</PageLink>
-        </Link>
+        <PageLink href="/" onPage={true}>
+          Portifolio
+        </PageLink>
 
-        <Link href="/">
-          <PageLink onPage={false}>Services</PageLink>
-        </Link>
+        <PageLink href="/" onPage={false}>
+          Services
+        </PageLink>
 
-        <Link href="/">
-          <PageLink onPage={false}>Resume</PageLink>
-        </Link>
+        <PageLink href="/" onPage={false}>
+          Resume
+        </PageLink>
 
-        <Link href="/">
-          <PageLink onPage={false}>Contact</PageLink>
-        </Link>
+        <PageLink href="/" onPage={false}>
+          Contact
+        </PageLink>
       </Nav>
 
       <GithubIconPositionBox>
-        <Image
-          src="/icons/github.png"
-          objectFit="contain"
-          width={53}
-          height={53}
-        />
+        <Image src="/icons/github.png" width={53} height={53} alt="github" />
       </GithubIconPositionBox>
     </Container>
   )
