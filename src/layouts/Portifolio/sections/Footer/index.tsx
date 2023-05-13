@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 
@@ -59,7 +60,15 @@ export default function Footer() {
 
         <Button type="submit">Send message</Button>
       </ContactBox>
-      <ArtBox></ArtBox>
+      <ArtBox>
+        <Image
+          src="/arts/mail_on_glass.svg"
+          width={400}
+          height={400}
+          alt="github"
+        />
+        <div />
+      </ArtBox>
     </Container>
   )
 }

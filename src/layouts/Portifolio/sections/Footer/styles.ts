@@ -38,7 +38,10 @@ export const Button = styled.button`
 `
 
 export const ArtBox = styled.div`
-  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 50%;
+  min-height: 100%;
   max-width: calc(720px - 16px);
 `
