@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import type { StaticImageData } from 'next/image'
+
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
