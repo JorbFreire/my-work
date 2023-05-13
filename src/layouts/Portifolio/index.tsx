@@ -1,5 +1,6 @@
 import HeadLine from './sections/HeadLine'
 import ProjectResume from './sections/ProjectResume'
+import Footer from './sections/Footer'
 
 import projectsList from './projectsList'
 
@@ -17,6 +18,7 @@ export default function Portifolio() {
           reverse={projectInfo.reverse}
         />
       ))}
+      <Footer />
     </>
   )
 }
