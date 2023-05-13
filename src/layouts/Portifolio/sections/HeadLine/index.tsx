@@ -1,18 +1,29 @@
 import Navbar from 'components/Navbar'
 
-import { Container, ImageBox, HeadLine, CallToAction } from './styles'
+import {
+  Container,
+  ImageBox,
+  ContentBox,
+  HeadLine,
+  CallToAction,
+} from './styles'
 
 export default function Portifolio() {
   return (
     <Container>
       <ImageBox imageAnchor="top">
-        <Navbar />
-        <div>
-          <HeadLine>High quality websites {'&'} web apps</HeadLine>
-          <CallToAction size="large">👇 CHECK OUT MY WORK.</CallToAction>
-        </div>
+        <ContentBox>
+          <Navbar />
 
-        <div />
+          <div>
+            <HeadLine>
+              High quality websites {'&'} <br /> web apps
+            </HeadLine>
+            <CallToAction size="large">👇 CHECK OUT MY WORK.</CallToAction>
+          </div>
+
+          <div />
+        </ContentBox>
       </ImageBox>
     </Container>
   )

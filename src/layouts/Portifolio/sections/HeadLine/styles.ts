@@ -16,15 +16,25 @@ export const Container = styled.div`
 
 export const ImageBox = styled.main<ImageBoxProps>`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+
   height: 100%;
   width: 100%;
-  padding: 0 269px;
+  padding: 0 128px;
 
   background-image: url('/backgrounds/waves_bottom.png');
   background-size: cover;
   background-attachment: fixed;
+`
+
+export const ContentBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
 `
 
 export const HeadLine = styled.h1`
