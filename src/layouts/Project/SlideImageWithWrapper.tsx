@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import type { StaticImageData } from 'next/image'
+
 import { SlideImageWrapper } from './styles'
 
 interface StaticRequire {
@@ -14,6 +16,6 @@ interface ImageProps {
 
 export const SlideImage = (props: ImageProps) => (
   <SlideImageWrapper>
-    <Image {...props} height="100%" objectFit="contain" />
+    <Image {...props} fill={true} style={{ objectFit: 'contain' }} />
   </SlideImageWrapper>
 )

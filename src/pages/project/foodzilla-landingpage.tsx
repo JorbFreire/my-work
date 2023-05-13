@@ -1,4 +1,5 @@
 import Project from 'layouts/Project'
+import type { StaticImageData } from 'next/image'
 
 import chat from '../../assets/jobs/foodzilla-dashboard/chat.png'
 import chat2 from '../../assets/jobs/foodzilla-dashboard/chat2.png'
