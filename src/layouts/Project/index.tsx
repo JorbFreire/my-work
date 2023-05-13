@@ -1,9 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import type { StaticImageData } from 'next/image'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
-
-import arrowIcon from '../../assets/icons/arrow.svg'
 
 import {
   Container,
@@ -69,23 +68,23 @@ const Project = ({
           <Slide
             prevArrow={
               <SlideButton side="prev">
-                <Image src={arrowIcon} />
+                <Image src="/icons/arrowIcon" alt="" />
               </SlideButton>
             }
             nextArrow={
               <SlideButton side="next">
-                <Image src={arrowIcon} />
+                <Image src="/icons/arrowIcon" alt="" />
               </SlideButton>
             }
             indicators={true}
           >
             {previews.map(({ type, content }, index) =>
               type === 'video' ? (
-                <div className="each-slide">
+                <div key={Math.random()} className="each-slide">
                   <h1>video</h1>
                 </div>
               ) : (
-                <EachSlide className="each-slide">
+                <EachSlide key={Math.random()} className="each-slide">
                   <SlideImage
                     key={index}
                     src={content}

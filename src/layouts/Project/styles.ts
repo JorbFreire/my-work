@@ -19,7 +19,7 @@ export const Container = styled.main`
 `
 
 export const BGImage = styled.div`
-  background: url('/img/backgrounds/waves_top.png') no-repeat;
+  background: url('/backgrounds/waves_top.png') no-repeat;
   background-size: cover;
   background-attachment: scroll;
   padding: 20px 80px 0;
