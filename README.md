@@ -8,11 +8,9 @@ Boilerplate avalible on [helderburato/nextjs-boilerplate](https://github.com/hel
 
 ## What it works for
 
-This project runs a website build to display some project that I build or worked on.
-I decide to put this online on an personal website just to make it easier to send 
-to people on short and more friendly url's, but once it's been done I shall probabily 
-improve it a lot as a project it self and use to centralize the pratice of new 
-libraries and techniques in the future.
+This project runs a website built to display some projects that I build or worked on.
+I shall probably improve it a lot as a project itself and use it to centralize the
+practice of new libraries and techniques in the future.
 
 ## Wanna custom and use it for yourself?
 
@@ -26,4 +24,4 @@ npm run dev
 yarn dev
 ```
 
-Them it will be online at [http://localhost:3000/](http://localhost:3000/)
+Then it will be online at [http://localhost:3000/](http://localhost:3000/)
