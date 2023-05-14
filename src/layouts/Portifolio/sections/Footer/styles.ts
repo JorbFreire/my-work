@@ -1,11 +1,22 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.section`
   display: flex;
   justify-content: center;
-  padding: 32px 128px;
-  background-color: #2a373c;
-  gap: 32px;
+  background-color: ${({ theme }) => theme.pallete.secondary.main};
+
+  ${({ theme }) =>
+    theme.breakpoints.map(
+      (breakpoint: breakpointType, index: number) => css`
+        @media (min-width: ${breakpoint.media}px) {
+          padding-top: ${theme.page.vertical_padding[index]}px;
+          padding-bottom: ${theme.page.vertical_padding[index]}px;
+          padding-right: ${theme.page.horizontal_padding[index]}px;
+          padding-left: ${theme.page.horizontal_padding[index]}px;
+          gap: ${theme.page.vertical_padding[index]}px;
+        }
+      `,
+    )}
 `
 
 export const ContactBox = styled.form`
@@ -13,20 +24,25 @@ export const ContactBox = styled.form`
   flex-direction: column;
   width: 50%;
   max-width: calc(720px - 16px);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    width: 100%;
+  }
 `
 
 export const Title = styled.h3`
   font-weight: 400;
   font-size: 3.2rem;
   letter-spacing: 0.1em;
-  color: #fff;
+  color: ${({ theme }) => theme.pallete.primary.main};
 `
 
 export const Button = styled.button`
   width: fit-content;
   background: none;
-  color: #fff;
-  border: 2px solid #f8a9b3;
+  color: ${({ theme }) => theme.pallete.grey.light};
+  border: 2px solid;
+  border-color: ${({ theme }) => theme.pallete.primary.main};
   padding: 16px 32px;
   font-size: 1.8rem;
   border-radius: 15px;
@@ -41,7 +57,12 @@ export const ArtBox = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 50%;
+
   min-height: 100%;
+  width: 50%;
   max-width: calc(720px - 16px);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    display: none;
+  }
 `

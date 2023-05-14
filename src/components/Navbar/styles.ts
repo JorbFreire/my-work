@@ -1,9 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Link from 'next/link'
 
 interface PageLinkProps {
   onPage: boolean
 }
+
+const onPageCSS = css`
+  color: ${({ theme }) => theme.pallete.primary.main};
+  font-weight: bold;
+`
 
 export const Container = styled.header`
   position: relative;
@@ -20,6 +25,15 @@ export const GithubIconPositionBox = styled.div`
   height: 124px;
   top: 66px;
   right: -80px;
+  @media (max-width: ${({ theme }) => theme.breakpoints[6].media}px) {
+    right: -40px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
+    right: -20px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    right: -8px;
+  }
 `
 
 export const LogoPositionBox = styled.div`
@@ -32,20 +46,36 @@ export const LogoText = styled.h2`
   font-weight: 700;
   font-size: 6.4rem;
   letter-spacing: 0.2em;
-  color: #f8a9b3;
+  color: ${({ theme }) => theme.pallete.primary.main};
   margin-left: 32px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
+    font-size: 4.8rem;
+    margin-left: 16px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    font-size: 3.2rem;
+    margin-left: 16px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    display: none;
+  }
 `
 
 export const Nav = styled.nav`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 66px;
+  width: 100%;
+  max-width: 600px;
+  margin-right: 60px;
+  margin-left: 16px;
 `
 
 export const PageLink = styled(Link)<PageLinkProps>`
   font-size: 2.4rem;
   color: #fff;
   text-decoration: none !important;
-  ${({ onPage }) => (onPage ? `color: #F8A9B3; font-weight: bold;` : '')}
-  margin-right: 60px;
+  ${({ onPage }) => onPage && onPageCSS}
 `

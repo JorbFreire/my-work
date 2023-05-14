@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 interface CallToActionProps {
   size?: 'small' | 'large'
@@ -10,7 +10,7 @@ interface ImageBoxProps {
 
 export const Container = styled.div`
   height: 910px;
-  background-color: #2a373c;
+  background-color: ${({ theme }) => theme.pallete.secondary.main};
   box-shadow: 0px -15px 120px -15px rgba(0, 0, 0, 0.25);
 `
 
@@ -20,11 +20,22 @@ export const ImageBox = styled.main<ImageBoxProps>`
 
   height: 100%;
   width: 100%;
-  padding: 0 128px;
 
   background-image: url('/backgrounds/waves_bottom.png');
   background-size: cover;
   background-attachment: fixed;
+
+  ${({ theme }) =>
+    theme.breakpoints.map(
+      (breakpoint: breakpointType, index: number) => css`
+        @media (min-width: ${breakpoint.media}px) {
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-right: ${theme.page.horizontal_padding[index]}px;
+          padding-left: ${theme.page.horizontal_padding[index]}px;
+        }
+      `,
+    )}
 `
 
 export const ContentBox = styled.div`
@@ -42,13 +53,24 @@ export const HeadLine = styled.h1`
   font-weight: bold;
   line-height: 135%;
   letter-spacing: 0.1em;
-  color: #f8a9b3;
+  color: ${({ theme }) => theme.pallete.primary.main};
   margin-bottom: 56px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
+    font-size: 7rem;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    font-size: 6.4rem;
+  }
 `
 
 export const CallToAction = styled.h2<CallToActionProps>`
   font-size: ${({ size }) => (size === 'large' ? 5.6 : 3.2)}rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #fff;
+  color: ${({ theme }) => theme.pallete.grey.light};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    font-size: 4.8rem;
+  }
 `

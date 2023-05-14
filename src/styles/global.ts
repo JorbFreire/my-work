@@ -5,7 +5,6 @@ const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    outline: 0;
     box-sizing: border-box;
   }
 
@@ -28,18 +27,6 @@ const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-family: 'Gemunu Libre', 'Roboto', sans-serif;
-  }
-
-  @media (max-width: 1440px) {
-    html {
-      font-size: 47%;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    html {
-      font-size: 40%;
-    }
   }
 `
 

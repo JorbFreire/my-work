@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export interface IContainerProps {
   backgroundColor: HexaColorStringType
@@ -14,20 +14,40 @@ export const Container = styled.section<IContainerProps>`
 `
 
 export const ContentBox = styled.div`
-  padding: 32px;
-  padding-top: 54px;
+  padding: 0;
   width: 33%;
+  /* background-color: red; */
+
+  ${({ theme }) =>
+    theme.breakpoints.map(
+      (breakpoint: breakpointType, index: number) => css`
+        @media (min-width: ${breakpoint.media}px) {
+          padding-top: ${theme.page.vertical_padding[index]}px;
+          padding-bottom: ${theme.page.vertical_padding[index] / 2}px;
+          padding-right: ${theme.page.horizontal_padding[index] / 2}px;
+          padding-left: ${theme.page.horizontal_padding[index] / 2}px;
+        }
+      `,
+    )}
 `
 
 export const ProjectTitle = styled.h3`
   font-size: 3.2rem;
   font-weight: 400;
   letter-spacing: 0.1em;
-  margin-bottom: 32px;
+
+  ${({ theme }) =>
+    theme.breakpoints.map(
+      (breakpoint: breakpointType, index: number) => css`
+        @media (min-width: ${breakpoint.media}px) {
+          padding-bottom: ${theme.page.vertical_padding[index]}px;
+        }
+      `,
+    )}
 `
 
 export const DescriptionText = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: 0.1em;
 
@@ -40,5 +60,4 @@ export const PreviewBox = styled.div`
   display: block;
   width: 77%;
   height: 100%;
-  background-color: red;
 `
