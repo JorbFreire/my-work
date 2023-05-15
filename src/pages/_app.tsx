@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import { ThemeProvider } from 'styled-components'
 import type { AppProps } from 'next/app'
+
+import { Analytics } from '@vercel/analytics/react'
+import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from 'styles/global'
 import { theme } from 'styles/theme'
@@ -20,6 +22,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   )
 }
