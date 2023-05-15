@@ -38,19 +38,28 @@ export const Title = styled.h3`
 `
 
 export const Button = styled.button`
+  align-self: flex-end;
   width: fit-content;
+  padding: 16px 32px;
+  margin-top: 32px;
+
   background: none;
   color: ${({ theme }) => theme.pallete.grey.light};
+
   border: 2px solid;
   border-color: ${({ theme }) => theme.pallete.primary.main};
-  padding: 16px 32px;
-  font-size: 1.8rem;
   border-radius: 15px;
+
+  font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.1em;
-  margin-top: 32px;
-  align-self: flex-end;
+
+  transition: color 0.3s;
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.pallete.primary.main};
+  }
 `
 
 export const ArtBox = styled.div`

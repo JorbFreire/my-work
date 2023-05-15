@@ -3,21 +3,40 @@ import styled, { css } from 'styled-components'
 const textCSS = css`
   font-size: 1.8rem;
   letter-spacing: 0.1em;
-  color: #ffffff;
 `
 
 const inputCSS = css`
   width: 100%;
-  background: none;
-  border: 2px solid #f8a9b3;
-  border-radius: 15px;
   padding: 16px 32px;
+
+  border: 2px solid;
+  border-color: ${({ theme }) => theme.pallete.grey.light};
+  border-radius: 15px;
+  background: none;
+  color: ${({ theme }) => theme.pallete.grey.light};
+
+  outline: 0;
+  transition: border-color 0.3s;
   ${textCSS}
+
+  & + label {
+    color: ${({ theme }) => theme.pallete.grey.light};
+  }
+
+  &:focus {
+    transition: border-color 0.3s;
+    border-color: ${({ theme }) => theme.pallete.primary.main};
+    & + label {
+      transition: transform 0.2s;
+      /* transition: color 0.3s; */
+      color: ${({ theme }) => theme.pallete.primary.main};
+    }
+  }
 
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transition: 0.16s;
+      transition: transform 0.2s;
       transform: translateY(-42px);
     }
   }
@@ -34,7 +53,8 @@ export const LabelText = styled.label`
   top: 16px;
   left: 32px;
   padding: 2px;
-  transition: 0.16s;
+
+  transition: transform 0.2s;
   cursor: text;
   ${textCSS}
 `
@@ -45,5 +65,6 @@ export const TextfieldInput = styled.input`
 
 export const TextareaInput = styled.textarea`
   min-width: 100%;
+  max-width: 100%;
   ${inputCSS}
 `
