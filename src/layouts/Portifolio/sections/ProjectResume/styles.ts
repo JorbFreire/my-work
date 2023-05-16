@@ -15,13 +15,12 @@ export const Container = styled.section<IContainerProps>`
 
 export const ContentBox = styled.div`
   padding: 0;
-  width: 33%;
-  /* background-color: red; */
 
   ${({ theme }) =>
     theme.breakpoints.map(
       (breakpoint: breakpointType, index: number) => css`
         @media (min-width: ${breakpoint.media}px) {
+          width: ${theme.preview.description_size[index]}%;
           padding-top: ${theme.page.vertical_padding[index]}px;
           padding-bottom: ${theme.page.vertical_padding[index] / 2}px;
           padding-right: ${theme.page.horizontal_padding[index] / 2}px;
@@ -58,6 +57,14 @@ export const DescriptionText = styled.p`
 
 export const PreviewBox = styled.div`
   display: block;
-  width: 77%;
   height: 100%;
+
+  ${({ theme }) =>
+    theme.breakpoints.map(
+      (breakpoint: breakpointType, index: number) => css`
+        @media (min-width: ${breakpoint.media}px) {
+          width: ${theme.preview.image_size[index]}%;
+        }
+      `,
+    )}
 `

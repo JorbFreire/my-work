@@ -32,6 +32,7 @@ export const GithubIconPositionBox = styled.div`
     right: -20px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    top: 0;
     right: -8px;
   }
 `
@@ -40,6 +41,12 @@ export const LogoPositionBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 66px;
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    margin-top: 0px;
+    img {
+      width: 36px;
+    }
+  }
 `
 
 export const LogoText = styled.h2`
@@ -55,7 +62,7 @@ export const LogoText = styled.h2`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     font-size: 3.2rem;
-    margin-left: 16px;
+    margin-left: 8px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
     display: none;
@@ -71,6 +78,10 @@ export const Nav = styled.nav`
   max-width: 600px;
   margin-right: 60px;
   margin-left: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    margin-top: 0;
+  }
 `
 
 export const PageLink = styled(Link)<PageLinkProps>`

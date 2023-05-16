@@ -10,7 +10,7 @@ interface ImageBoxProps {
 
 export const Container = styled.div`
   height: 910px;
-  background-color: ${({ theme }) => theme.pallete.secondary.main};
+  background-color: ${({ theme }) => theme.pallete.secondary.dark};
   box-shadow: 0px -15px 120px -15px rgba(0, 0, 0, 0.25);
 `
 
