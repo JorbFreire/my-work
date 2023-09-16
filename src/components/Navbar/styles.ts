@@ -32,8 +32,10 @@ export const GithubIconPositionBox = styled.div`
     right: -20px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    position: relative;
+    order: 3;
     top: 0;
-    right: -8px;
+    right: 0;
   }
 `
 
@@ -41,11 +43,16 @@ export const LogoPositionBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 66px;
+  @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
+    img {
+      width: 48px;
+    }
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     margin-top: 0px;
-    img {
-      width: 36px;
-    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    order: 2;
   }
 `
 
@@ -57,14 +64,10 @@ export const LogoText = styled.h2`
   margin-left: 32px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
-    font-size: 4.8rem;
-    margin-left: 16px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
     margin-left: 8px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     display: none;
   }
 `
@@ -79,14 +82,26 @@ export const Nav = styled.nav`
   margin-right: 60px;
   margin-left: 16px;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
+    max-width: 480px;
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
-    margin-top: 0;
+    margin: 0 16px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    order: 1;
+    width: fit-content;
+    margin: 0;
   }
 `
 
 export const PageLink = styled(Link)<PageLinkProps>`
   font-size: 2.4rem;
-  color: #fff;
-  text-decoration: none !important;
+  color: ${({ theme }) => theme.pallete.grey.light};
+  text-decoration: none;
   ${({ onPage }) => onPage && onPageCSS}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    display: none;
+  }
 `

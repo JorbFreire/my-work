@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import MobileMenu from 'components/MobileMenu'
+
 import {
   Container,
   GithubIconPositionBox,
@@ -18,6 +20,8 @@ export default function Navbar() {
       </LogoPositionBox>
 
       <Nav>
+        <MobileMenu />
+
         <PageLink href="/" onPage={true}>
           Portifolio
         </PageLink>
