@@ -17,7 +17,7 @@ export const Container = styled.header`
   height: fit-content;
 `
 
-export const GithubIconPositionBox = styled.div`
+export const GithubIconPositionBox = styled.a`
   position: absolute;
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@ export const Nav = styled.nav`
   }
 `
 
-export const PageLink = styled(Link)<PageLinkProps>`
+export const PageLink = styled.a<PageLinkProps>`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.pallete.grey.light};
   text-decoration: none;

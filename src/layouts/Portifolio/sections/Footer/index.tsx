@@ -31,7 +31,7 @@ export default function Footer() {
   }
 
   return (
-    <Container onSubmit={submitMessage}>
+    <Container id="contact" onSubmit={submitMessage}>
       <ContactBox>
         <Title>Leave me a message</Title>
         <Textfield

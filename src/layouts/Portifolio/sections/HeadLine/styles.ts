@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import { textShadowAnimation, arrowMoveAnimation } from './animations'
+
 interface CallToActionProps {
   size?: 'small' | 'large'
 }
@@ -11,7 +13,7 @@ interface ImageBoxProps {
 export const Container = styled.div`
   height: 910px;
   background-color: ${({ theme }) => theme.pallete.secondary.dark};
-  box-shadow: 0px -15px 120px -15px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 `
 
 export const ImageBox = styled.main<ImageBoxProps>`
@@ -64,13 +66,26 @@ export const HeadLine = styled.h1`
   }
 `
 
+export const CallToActionBox = styled.a`
+  display: flex;
+  text-decoration: none;
+  gap: 8px;
+`
+
 export const CallToAction = styled.h2<CallToActionProps>`
   font-size: ${({ size }) => (size === 'large' ? 5.6 : 3.2)}rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: ${({ theme }) => theme.pallete.grey.light};
 
+  ${textShadowAnimation}
+
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     font-size: 4.8rem;
   }
+`
+
+export const AnimatedSpan = styled(CallToAction)`
+  text-shadow: none;
+  animation: ${arrowMoveAnimation} 2s ease-in-out 1s infinite alternate both;
 `

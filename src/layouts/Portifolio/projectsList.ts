@@ -9,6 +9,20 @@ interface IprojectItemType extends IProjectResumeProps {
 const projectsList: Array<IprojectItemType> = [
   {
     id: 1,
+    title: 'Foodzilla Dashboard',
+    descriptionBlocks: [
+      'This client was a delivery plataform requesting a dashboard so they paterns could menage they orders consuming they existing API.',
+      'I build it from scratch with only some visual references and briefing from the responsable.',
+      'I made sure they paterns could easily checkout for new orders in realtime, accept or decline this orders and latter review it. They could also comunicate with they clients by the order status or directly through an built-in real time chat.',
+      'This project was built with ReactJS, socket-io, material-ui and a high level of custumization on material-ui.',
+    ],
+    previewImage: FoodZillaDashboardPreviewImage,
+    backgroundColor: '#fff',
+    textColor: '#76464c',
+    reverse: true,
+  },
+  {
+    id: 2,
     title: 'Foodzilla Landing Page',
     descriptionBlocks: [
       'Latter Foodzilla requested a landing page to attract new partners. I ended up being responsible to connect people and assure quality on the final result.',
@@ -18,20 +32,8 @@ const projectsList: Array<IprojectItemType> = [
       'I helped him to solve some usual CSS issues, specialy when handling responsivity. Also fixed some mistakes on my own and make this form work with firebase.',
     ],
     previewImage: FoodZillaLandingPagePreviewImage,
-    backgroundColor: '#7730CE99',
-    reverse: true,
-  },
-  {
-    id: 2,
-    title: 'Foodzilla Dashboard',
-    descriptionBlocks: [
-      'This client was a delivery plataform requesting a dashboard so they paterns could menage they orders consuming they existing API.',
-      'I build it from scratch with only some visual references and briefing from the responsable.',
-      'I made sure they paterns could easily checkout for new orders in realtime, accept or decline this orders and latter review it. They could also comunicate with they clients by the order status or directly through an built-in real time chat.',
-      'This project was built with ReactJS, socket-io, material-ui and a high level of custumization on material-ui.',
-    ],
-    previewImage: FoodZillaDashboardPreviewImage,
-    backgroundColor: '#ffe11599',
+    backgroundColor: '#2a373c',
+    textColor: '#fff',
     reverse: false,
   },
   {
@@ -45,7 +47,8 @@ const projectsList: Array<IprojectItemType> = [
       'I helped him to solve some usual CSS issues, specialy when handling responsivity. Also fixed some mistakes on my own and make this form work with firebase.',
     ],
     previewImage: FoodZillaLandingPagePreviewImage,
-    backgroundColor: '#7730CE99',
+    backgroundColor: '#6a8caf',
+    textColor: '#fff',
     reverse: true,
   },
 ]

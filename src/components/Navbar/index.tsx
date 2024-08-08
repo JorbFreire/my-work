@@ -26,20 +26,16 @@ export default function Navbar() {
           Portifolio
         </PageLink>
 
-        <PageLink href="/" onPage={false}>
+        <PageLink href="/services" onPage={false}>
           Services
         </PageLink>
 
-        <PageLink href="/" onPage={false}>
-          Resume
-        </PageLink>
-
-        <PageLink href="/" onPage={false}>
+        <PageLink href="#contact" onPage={false}>
           Contact
         </PageLink>
       </Nav>
 
-      <GithubIconPositionBox>
+      <GithubIconPositionBox href="https://github.com/JorbFreire">
         <Image src="/icons/github.png" width={53} height={53} alt="github" />
       </GithubIconPositionBox>
     </Container>

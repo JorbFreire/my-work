@@ -48,7 +48,7 @@ export const Button = styled.button`
 
   border: 2px solid;
   border-color: ${({ theme }) => theme.pallete.primary.main};
-  border-radius: 15px;
+  border-radius: 16px;
 
   font-size: 1.8rem;
   text-transform: uppercase;

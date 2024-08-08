@@ -10,10 +10,21 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   html, body, #__next {
     height: 100%;
+  }
+
+  body {
+    background-color: ${({ theme }) => theme.pallete.secondary.dark};
+  }
+
+  #__next {
+    background-image: url('/backgrounds/waves_bottom.png');
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   body, input, button {

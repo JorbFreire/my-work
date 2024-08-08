@@ -11,7 +11,7 @@ const inputCSS = css`
 
   border: 2px solid;
   border-color: ${({ theme }) => theme.pallete.grey.light};
-  border-radius: 15px;
+  border-radius: 16px;
   background: none;
   color: ${({ theme }) => theme.pallete.grey.light};
 

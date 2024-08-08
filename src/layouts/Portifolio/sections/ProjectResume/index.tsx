@@ -7,31 +7,38 @@ import {
   ProjectTitle,
   DescriptionText,
 } from './styles'
-import type { IContainerProps } from './styles'
+import type { IContainerProps, ITextComponentsProps } from './styles'
 
-export interface IProjectResumeProps extends IContainerProps {
+export interface IProjectResumeProps
+  extends IContainerProps,
+    ITextComponentsProps {
+  id?: string
   title: string
   descriptionBlocks: Array<string>
   previewImage: ImageSrcType
 }
 
 export default function ProjectResume({
+  id,
   title,
   descriptionBlocks,
   previewImage,
   backgroundColor,
+  textColor,
   reverse,
 }: IProjectResumeProps) {
   return (
-    <Container reverse={reverse} backgroundColor={backgroundColor}>
+    <Container id={id} reverse={reverse} backgroundColor={backgroundColor}>
       <ContentBox>
-        <ProjectTitle>{title}</ProjectTitle>
+        <ProjectTitle textColor={textColor}>{title}</ProjectTitle>
         {descriptionBlocks.map((text) => (
-          <DescriptionText key={Math.random()}>{text}</DescriptionText>
+          <DescriptionText key={Math.random()} textColor={textColor}>
+            {text}
+          </DescriptionText>
         ))}
       </ContentBox>
 
-      <PreviewBox>
+      <PreviewBox reverse={reverse}>
         <Image
           alt="alt"
           src={previewImage}

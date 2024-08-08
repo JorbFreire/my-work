@@ -1,7 +1,9 @@
 declare type breakpointType = { name: string; media: number }
 
 declare type palleteItemType = {
-  main: HexaColorStringType
+  darker?: HexaColorStringType
   dark: HexaColorStringType
+  main: HexaColorStringType
   light: HexaColorStringType
+  lighter?: HexaColorStringType
 }
