@@ -2,13 +2,9 @@ import type { IProjectResumeProps } from './sections/ProjectResume'
 import FoodZillaDashboardPreviewImage from 'assets/jobs/foodzilla-dashboard/pedido.png'
 import FoodZillaLandingPagePreviewImage from 'assets/jobs/foodzilla-dashboard/menu.png'
 
-interface IprojectItemType extends IProjectResumeProps {
-  id: number
-}
-
-const projectsList: Array<IprojectItemType> = [
+const projectsList: Array<IProjectResumeProps> = [
   {
-    id: 1,
+    id: '1',
     title: 'Foodzilla Dashboard',
     descriptionBlocks: [
       'This client was a delivery plataform requesting a dashboard so they paterns could menage they orders consuming they existing API.',
@@ -22,7 +18,7 @@ const projectsList: Array<IprojectItemType> = [
     reverse: true,
   },
   {
-    id: 2,
+    id: '2',
     title: 'Foodzilla Landing Page',
     descriptionBlocks: [
       'Latter Foodzilla requested a landing page to attract new partners. I ended up being responsible to connect people and assure quality on the final result.',
@@ -37,7 +33,7 @@ const projectsList: Array<IprojectItemType> = [
     reverse: false,
   },
   {
-    id: 3,
+    id: '3',
     title: 'Foodzilla Landing Page',
     descriptionBlocks: [
       'Latter Foodzilla requested a landing page to attract new partners. I ended up being responsible to connect people and assure quality on the final result.',

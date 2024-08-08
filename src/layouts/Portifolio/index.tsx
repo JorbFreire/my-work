@@ -10,7 +10,7 @@ export default function Portifolio() {
       <HeadLine />
       {projectsList.map((projectInfo) => (
         <ProjectResume
-          id={projectInfo.id === 1 ? 'first_project' : `${projectInfo.id}`}
+          id={projectInfo.id === '1' ? 'first_project' : `${projectInfo.id}`}
           key={projectInfo.id}
           title={projectInfo.title}
           descriptionBlocks={projectInfo.descriptionBlocks}
