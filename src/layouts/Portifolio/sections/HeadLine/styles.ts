@@ -70,13 +70,30 @@ export const CallToActionBox = styled.a`
   display: flex;
   text-decoration: none;
   gap: 8px;
+
+  &:hover *::after {
+    content: '';
+    width: calc(100% + 16px);
+  }
 `
 
 export const CallToAction = styled.h2<CallToActionProps>`
+  position: relative;
   font-size: ${({ size }) => (size === 'large' ? 5.6 : 3.2)}rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: ${({ theme }) => theme.pallete.grey.light};
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+  }
 
   ${textShadowAnimation}
 
@@ -88,4 +105,7 @@ export const CallToAction = styled.h2<CallToActionProps>`
 export const AnimatedSpan = styled(CallToAction)`
   text-shadow: none;
   animation: ${arrowMoveAnimation} 2s ease-in-out 1s infinite alternate both;
+  &::after {
+    display: none;
+  }
 `
