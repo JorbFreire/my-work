@@ -7,11 +7,6 @@ type themeType = {
     vertical_padding: StaticSizedTuple<number>
     external_radius: StaticSizedTuple<`${number}px`>
   }
-  // preview is sized in percentage
-  preview: {
-    description_size: StaticSizedTuple<number>
-    image_size: StaticSizedTuple<number>
-  }
   pallete: {
     primary: palleteItemType
     secondary: palleteItemType
@@ -54,10 +49,6 @@ export const theme: themeType = {
     horizontal_padding: [8, 16, 16, 32, 64, 64, 128],
     vertical_padding: [8, 8, 8, 16, 32, 32, 32],
     external_radius: ['32px', '32px', '32px', '32px', '32px', '32px', '32px'],
-  },
-  preview: {
-    description_size: [100, 100, 100, 50, 50, 50, 50],
-    image_size: [0, 0, 0, 50, 50, 50, 50],
   },
   pallete: {
     primary: {

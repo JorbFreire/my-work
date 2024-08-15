@@ -1,16 +1,26 @@
 import styled, { css } from 'styled-components'
 
 export interface IContainerProps {
-  backgroundColor: HexaColorStringType
-  reverse?: boolean
+  $backgroundColor: HexaColorStringType
+  $reverse?: boolean
 }
 
 export interface ITextComponentsProps {
-  textColor: HexaColorStringType
+  $textColor: HexaColorStringType
+  $isVisible?: boolean
 }
 
 interface IPreviewBox {
-  reverse?: boolean
+  $reverse?: boolean
+  $maxSize?: boolean
+}
+
+interface IContentBox {
+  $isVisible: boolean
+}
+
+interface IExpandImageButton extends IPreviewBox {
+  $dark?: boolean
 }
 
 const firstSectionStyle = css`
@@ -33,27 +43,36 @@ const firstSectionStyle = css`
 
 export const Container = styled.section<IContainerProps>`
   display: flex;
-  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+  flex-direction: ${({ $reverse }) => ($reverse ? 'row-reverse' : 'row')};
   height: 100vh;
   width: 100%;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
 
   z-index: 2;
 
   ${firstSectionStyle}
 `
 
-export const ContentBox = styled.div`
+export const ContentBox = styled.div<IContentBox>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0;
 
-  ${({ theme }) =>
+  width: 50%;
+
+  ${({ $isVisible }) =>
+    !$isVisible &&
+    css`
+      width: 0;
+      overflow: hidden;
+    `}
+  transition: width 0.3s ease;
+
+  ${({ theme, $isVisible }) =>
+    $isVisible &&
     theme.breakpoints.map(
       (breakpoint: breakpointType, index: number) => css`
         @media (min-width: ${breakpoint.media}px) {
-          width: ${theme.preview.description_size[index]}%;
           padding-top: ${theme.page.vertical_padding[index]}px;
           padding-bottom: ${theme.page.vertical_padding[index] / 2}px;
           padding-right: ${theme.page.horizontal_padding[index] / 2}px;
@@ -67,7 +86,10 @@ export const ProjectTitle = styled.h3<ITextComponentsProps>`
   font-size: 3.2rem;
   font-weight: 400;
   letter-spacing: 0.1em;
-  color: ${({ textColor }) => textColor};
+  color: ${({ $textColor }) => $textColor};
+
+  ${({ $isVisible }) => !$isVisible && 'opacity: 0;'}
+  transition: opacity 0.2s ease;
 
   ${({ theme }) =>
     theme.breakpoints.map(
@@ -76,14 +98,16 @@ export const ProjectTitle = styled.h3<ITextComponentsProps>`
           padding-bottom: ${theme.page.vertical_padding[index]}px;
         }
       `,
-    )}
+    )};
 `
 
 export const DescriptionText = styled.p<ITextComponentsProps>`
   font-size: 2.2rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: ${({ textColor }) => textColor};
+  color: ${({ $textColor }) => $textColor};
+
+  overflow: hidden;
 
   &:not(:last-of-type) {
     margin-bottom: 12px;
@@ -91,23 +115,60 @@ export const DescriptionText = styled.p<ITextComponentsProps>`
 `
 
 export const PreviewBox = styled.div<IPreviewBox>`
-  display: block;
-  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
 
-  img {
+  height: 100%;
+  width: 50%;
+
+  ${({ $maxSize }) => !$maxSize && 'width: 100%;'}
+  transition: width 0.3s ease;
+
+  & > img {
     mask-image: linear-gradient(
-      to ${({ reverse }) => (reverse ? 'right' : 'left')},
+      to ${({ $reverse }) => ($reverse ? 'right' : 'left')},
       rgb(0 0 0 / 90%),
       transparent
     );
+    ${({ $maxSize }) => !$maxSize && 'mask-image : none;'}
+    transition: mask-image 0.3s ease-in-out;
+  }
+`
+
+export const ExpandImageButton = styled.button<IExpandImageButton>`
+  position: absolute;
+
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  transition: transform 0.5s, opacity 1s;
+  background-color: ${({ $dark, theme }) =>
+    $dark ? '#ffffff' : theme.pallete.secondary.dark}AA;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.2s, opacity 1s;
   }
 
-  ${({ theme }) =>
-    theme.breakpoints.map(
-      (breakpoint: breakpointType, index: number) => css`
-        @media (min-width: ${breakpoint.media}px) {
-          width: ${theme.preview.image_size[index]}%;
-        }
-      `,
-    )}
+  &:active::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  ${({ $reverse }) => ($reverse ? 'right' : 'left')}: 64px;
+  img {
+    width: 128px;
+    height: 128px;
+  }
 `

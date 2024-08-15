@@ -10,14 +10,14 @@ export default function Portifolio() {
       <HeadLine />
       {projectsList.map((projectInfo) => (
         <ProjectResume
-          id={projectInfo.id === '1' ? 'first_project' : `${projectInfo.id}`}
-          key={projectInfo.id}
+          id={projectInfo.id === '1' ? 'first' : `${projectInfo.id}`}
+          key={Number(projectInfo.id)}
           title={projectInfo.title}
           descriptionBlocks={projectInfo.descriptionBlocks}
           previewImage={projectInfo.previewImage}
-          backgroundColor={projectInfo.backgroundColor}
-          textColor={projectInfo.textColor}
-          reverse={projectInfo.reverse}
+          $backgroundColor={projectInfo.$backgroundColor}
+          $textColor={projectInfo.$textColor}
+          $reverse={projectInfo.$reverse}
         />
       ))}
       <Footer />

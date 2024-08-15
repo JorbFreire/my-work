@@ -6,24 +6,27 @@ import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from 'styles/global'
 import { theme } from 'styles/theme'
+import { StrictMode } from 'react'
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <Head>
-        <title>NextJS Boilerplate</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
-        />
-      </Head>
-      <GlobalStyles />
-      <Component {...pageProps} />
-      <Analytics />
-    </ThemeProvider>
+    <StrictMode>
+      <ThemeProvider theme={theme}>
+        <Head>
+          <title>Jorb.dev</title>
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+          <link rel="manifest" href="/manifest.json" />
+          <meta
+            name="description"
+            content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+          />
+        </Head>
+        <GlobalStyles />
+        <Component {...pageProps} />
+        <Analytics />
+      </ThemeProvider>
+    </StrictMode>
   )
 }
 

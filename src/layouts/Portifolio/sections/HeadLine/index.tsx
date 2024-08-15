@@ -13,7 +13,7 @@ import {
 export default function Portifolio() {
   return (
     <Container>
-      <ImageBox imageAnchor="top">
+      <ImageBox>
         <ContentBox>
           <Navbar />
 
@@ -21,7 +21,7 @@ export default function Portifolio() {
             <HeadLine>
               High quality websites {'&'} <br /> web apps
             </HeadLine>
-            <CallToActionBox href="#first_project">
+            <CallToActionBox href="#first">
               <AnimatedSpan size="large">👇 </AnimatedSpan>
               <CallToAction size="large">CHECK OUT MY WORK.</CallToAction>
             </CallToActionBox>

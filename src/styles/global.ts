@@ -36,6 +36,11 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
+  button {
+    border: none;
+    background: none;
+  }
+
   h2 {
     font-family: 'Gemunu Libre', 'Roboto', sans-serif;
   }

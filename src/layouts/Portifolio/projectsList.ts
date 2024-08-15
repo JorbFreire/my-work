@@ -13,9 +13,9 @@ const projectsList: Array<IProjectResumeProps> = [
       'This project was built with ReactJS, socket-io, material-ui and a high level of custumization on material-ui.',
     ],
     previewImage: FoodZillaDashboardPreviewImage,
-    backgroundColor: '#fff',
-    textColor: '#76464c',
-    reverse: true,
+    $backgroundColor: '#fff',
+    $textColor: '#76464c',
+    $reverse: true,
   },
   {
     id: '2',
@@ -28,9 +28,9 @@ const projectsList: Array<IProjectResumeProps> = [
       'I helped him to solve some usual CSS issues, specialy when handling responsivity. Also fixed some mistakes on my own and make this form work with firebase.',
     ],
     previewImage: FoodZillaLandingPagePreviewImage,
-    backgroundColor: '#2a373c',
-    textColor: '#fff',
-    reverse: false,
+    $backgroundColor: '#2a373c',
+    $textColor: '#fff',
+    $reverse: false,
   },
   {
     id: '3',
@@ -43,9 +43,9 @@ const projectsList: Array<IProjectResumeProps> = [
       'I helped him to solve some usual CSS issues, specialy when handling responsivity. Also fixed some mistakes on my own and make this form work with firebase.',
     ],
     previewImage: FoodZillaLandingPagePreviewImage,
-    backgroundColor: '#6a8caf',
-    textColor: '#fff',
-    reverse: true,
+    $backgroundColor: '#6a8caf',
+    $textColor: '#fff',
+    $reverse: true,
   },
 ]
 

@@ -6,17 +6,13 @@ interface CallToActionProps {
   size?: 'small' | 'large'
 }
 
-interface ImageBoxProps {
-  imageAnchor: 'top' | 'bottom'
-}
-
 export const Container = styled.div`
   height: 910px;
   background-color: ${({ theme }) => theme.pallete.secondary.dark};
   z-index: 1;
 `
 
-export const ImageBox = styled.main<ImageBoxProps>`
+export const ImageBox = styled.main`
   display: flex;
   justify-content: center;
 
