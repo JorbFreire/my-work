@@ -41,8 +41,9 @@ export const Container = styled.section<IContainerProps>`
   flex-direction: ${({ $reverse }) => ($reverse ? 'row-reverse' : 'row')};
   height: 100vh;
   width: 100%;
-  background-color: ${({ $backgroundColor }) => $backgroundColor};
 
+  overflow: hidden;
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
   z-index: 2;
 
   ${firstSectionStyle}
