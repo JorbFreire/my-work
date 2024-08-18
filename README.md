@@ -14,13 +14,10 @@ practice of new libraries and techniques in the future.
 
 ## Roadmap
 
-- [ ] Responsive Images
-- [ ] Improve responsivity on project previews
-- [ ] Make it all responsive on really small screens
+- [ ] Mobile expandable previews slide modal
 - [ ] Make the contact form work
-- [ ] Build integration test
+- [ ] Responsive Images
 - [ ] Find better quality assets
-- [ ] Make the previews expandable to display more images
 
 ## Wanna custom and use it for yourself?
 
