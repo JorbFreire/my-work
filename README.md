@@ -15,6 +15,7 @@ practice of new libraries and techniques in the future.
 ## Roadmap
 
 - [ ] Mobile expandable previews slide modal
+- [ ] Add contact info besides contact form
 - [ ] Make the contact form work
 - [ ] Responsive Images
 - [ ] Find better quality assets
