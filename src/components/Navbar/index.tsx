@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import MobileMenu from 'components/MobileMenu'
+// import MobileMenu from 'components/MobileMenu'
 
 import {
   Container,
@@ -20,15 +20,16 @@ export default function Navbar() {
       </LogoPositionBox>
 
       <Nav>
-        <MobileMenu />
-
+        {/* not fully implemented so is better not to show at all */}
+        {/* <MobileMenu /> */}
+        {/*
         <PageLink href="/" onPage={true}>
           Portifolio
         </PageLink>
 
         <PageLink href="/services" onPage={false}>
           Services
-        </PageLink>
+        </PageLink> */}
 
         <PageLink href="#contact" onPage={false}>
           Contact
