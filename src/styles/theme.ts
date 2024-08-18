@@ -46,8 +46,8 @@ export const theme: themeType = {
     },
   ],
   page: {
-    horizontal_padding: [8, 16, 32, 32, 64, 64, 128],
-    vertical_padding: [8, 8, 16, 32, 32, 32, 32],
+    horizontal_padding: [16, 32, 32, 32, 64, 64, 128],
+    vertical_padding: [16, 16, 32, 32, 32, 32, 32],
     external_radius: ['16px', '16px', '16px', '16px', '32px', '32px', '32px'],
   },
   pallete: {
