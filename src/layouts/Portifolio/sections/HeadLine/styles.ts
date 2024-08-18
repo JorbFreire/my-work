@@ -10,6 +10,10 @@ export const Container = styled.div`
   height: 910px;
   background-color: ${({ theme }) => theme.pallete.secondary.dark};
   z-index: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    height: 890px;
+  }
 `
 
 export const ImageBox = styled.main`
@@ -59,6 +63,9 @@ export const HeadLine = styled.h1`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     font-size: 6.4rem;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    font-size: 5%.2;
   }
 `
 
