@@ -14,9 +14,10 @@ export default function Portifolio() {
           key={Number(projectInfo.id)}
           title={projectInfo.title}
           descriptionBlocks={projectInfo.descriptionBlocks}
-          previewImage={projectInfo.previewImage}
+          slideImages={projectInfo.slideImages}
           $backgroundColor={projectInfo.$backgroundColor}
           $textColor={projectInfo.$textColor}
+          $slideSelectorColor={projectInfo.$slideSelectorColor}
           $reverse={projectInfo.$reverse}
         />
       ))}

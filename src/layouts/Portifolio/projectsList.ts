@@ -1,10 +1,25 @@
 import type { IProjectResumeProps } from './sections/ProjectResume'
-import FoodZillaDashboardPreviewImage from 'assets/jobs/foodzilla-dashboard/pedido.png'
+
+// *** Foodzilla assets
+import FoodZillaDashboardImage0 from 'assets/jobs/foodzilla-dashboard/pedido.png'
+import FoodZillaDashboardImage1 from 'assets/jobs/foodzilla-dashboard/chat.png'
+import FoodZillaDashboardImage2 from 'assets/jobs/foodzilla-dashboard/chat2.png'
+import FoodZillaDashboardImage3 from 'assets/jobs/foodzilla-dashboard/criar_item.png'
+import FoodZillaDashboardImage4 from 'assets/jobs/foodzilla-dashboard/editar_item.png'
+import FoodZillaDashboardImage5 from 'assets/jobs/foodzilla-dashboard/impressao.png'
+import FoodZillaDashboardImage6 from 'assets/jobs/foodzilla-dashboard/menu.png'
+import FoodZillaDashboardImage7 from 'assets/jobs/foodzilla-dashboard/menu_e_timer.png'
+//      *** gifs
+import FoodZillaDashboardImage8 from 'assets/jobs/foodzilla-dashboard/gifs/criar_produto.gif'
+import FoodZillaDashboardImage9 from 'assets/jobs/foodzilla-dashboard/gifs/mobile_menu.gif'
+import FoodZillaDashboardImage10 from 'assets/jobs/foodzilla-dashboard/gifs/mobile_pedido.gif'
+// ***
+
 import FoodZillaLandingPagePreviewImage from 'assets/jobs/foodzilla-dashboard/menu.png'
 
 const projectsList: Array<IProjectResumeProps> = [
   {
-    id: '1',
+    id: '12',
     title: 'Foodzilla Dashboard',
     descriptionBlocks: [
       'This client was a delivery plataform requesting a dashboard so they paterns could menage they orders consuming they existing API.',
@@ -12,9 +27,10 @@ const projectsList: Array<IProjectResumeProps> = [
       'I made sure they paterns could easily checkout for new orders in realtime, accept or decline this orders and latter review it. They could also comunicate with they clients by the order status or directly through an built-in real time chat.',
       'This project was built with ReactJS, socket-io, material-ui and a high level of custumization on material-ui.',
     ],
-    previewImage: FoodZillaDashboardPreviewImage,
+    slideImages: [FoodZillaLandingPagePreviewImage],
     $backgroundColor: '#fff',
     $textColor: '#76464c',
+    $slideSelectorColor: '#76464c',
     $reverse: true,
   },
   {
@@ -27,9 +43,22 @@ const projectsList: Array<IProjectResumeProps> = [
       'This another devoloper had less experience, he end up building most of this page. My job with him was ensure that it was perfectly matching the mockup, responsive and working.',
       'I helped him to solve some usual CSS issues, specialy when handling responsivity. Also fixed some mistakes on my own and make this form work with firebase.',
     ],
-    previewImage: FoodZillaLandingPagePreviewImage,
+    slideImages: [
+      FoodZillaDashboardImage0,
+      FoodZillaDashboardImage1,
+      FoodZillaDashboardImage2,
+      FoodZillaDashboardImage3,
+      FoodZillaDashboardImage4,
+      FoodZillaDashboardImage5,
+      FoodZillaDashboardImage6,
+      FoodZillaDashboardImage7,
+      FoodZillaDashboardImage8,
+      FoodZillaDashboardImage9,
+      FoodZillaDashboardImage10,
+    ],
     $backgroundColor: '#2a373c',
     $textColor: '#fff',
+    $slideSelectorColor: '#2a373c',
     $reverse: false,
   },
   {
@@ -42,9 +71,10 @@ const projectsList: Array<IProjectResumeProps> = [
       'This another devoloper had less experience, he end up building most of this page. My job with him was ensure that it was perfectly matching the mockup, responsive and working.',
       'I helped him to solve some usual CSS issues, specialy when handling responsivity. Also fixed some mistakes on my own and make this form work with firebase.',
     ],
-    previewImage: FoodZillaLandingPagePreviewImage,
+    slideImages: [FoodZillaLandingPagePreviewImage],
     $backgroundColor: '#6a8caf',
     $textColor: '#fff',
+    $slideSelectorColor: '#6a8caf',
     $reverse: true,
   },
 ]

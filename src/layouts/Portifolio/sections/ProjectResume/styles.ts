@@ -10,11 +10,6 @@ export interface ITextComponentsProps {
   $isVisible?: boolean
 }
 
-interface IPreviewBox {
-  $reverse?: boolean
-  $maxSize?: boolean
-}
-
 interface IContentBox {
   $isVisible: boolean
 }
@@ -122,18 +117,8 @@ export const PreviewBox = styled.div<IPreviewBox>`
   height: 100%;
   width: 50%;
 
-  ${({ $maxSize }) => !$maxSize && 'width: 100%;'}
+  ${({ $isMaxSize }) => !$isMaxSize && 'width: 100%;'}
   transition: width 0.3s ease;
-
-  & > img {
-    mask-image: linear-gradient(
-      to ${({ $reverse }) => ($reverse ? 'right' : 'left')},
-      rgb(0 0 0 / 90%),
-      transparent
-    );
-    ${({ $maxSize }) => !$maxSize && 'mask-image : none;'}
-    transition: mask-image 0.3s ease-in-out;
-  }
 `
 
 export const ExpandImageButton = styled.button<IExpandImageButton>`

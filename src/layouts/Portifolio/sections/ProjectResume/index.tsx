@@ -10,6 +10,7 @@ import {
   DescriptionText,
 } from './styles'
 import type { IContainerProps, ITextComponentsProps } from './styles'
+import Slide from 'components/Slide'
 
 export interface IProjectResumeProps
   extends IContainerProps,
@@ -17,16 +18,18 @@ export interface IProjectResumeProps
   id?: string
   title: string
   descriptionBlocks: Array<string>
-  previewImage: ImageSrcType
+  slideImages: Array<ImageSrcType>
+  $slideSelectorColor: HexaColorValueType
 }
 
 export default function ProjectResume({
   id,
   title,
   descriptionBlocks,
-  previewImage,
+  slideImages,
   $backgroundColor,
   $textColor,
+  $slideSelectorColor,
   $reverse,
 }: IProjectResumeProps) {
   const [isDesciptionVisible, setIsDesciptionVisible] = useState(true)
@@ -48,16 +51,12 @@ export default function ProjectResume({
         ))}
       </ContentBox>
 
-      <PreviewBox $maxSize={isDesciptionVisible} $reverse={$reverse}>
-        <Image
-          alt="alt"
-          src={previewImage}
-          style={{
-            height: '100%',
-            width: '100%',
-            objectFit: 'cover',
-            objectPosition: $reverse ? 'right center' : 'left center',
-          }}
+      <PreviewBox $isMaxSize={isDesciptionVisible} $reverse={$reverse}>
+        <Slide
+          slideImages={slideImages}
+          $slideSelectorColor={$slideSelectorColor}
+          $reverse={$reverse}
+          $isMaxSize={isDesciptionVisible}
         />
 
         <ExpandImageButton
