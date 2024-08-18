@@ -14,9 +14,11 @@ practice of new libraries and techniques in the future.
 
 ## Roadmap
 
+#### High priority
 - [ ] Mobile expandable previews slide modal
 - [ ] Add contact info besides contact form
 - [ ] Make the contact form work
+#### Lower priority
 - [ ] Responsive Images
 - [ ] Find better quality assets
 
