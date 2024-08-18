@@ -7,25 +7,11 @@ interface CallToActionProps {
 }
 
 export const Container = styled.div`
-  height: 910px;
-  background-color: ${({ theme }) => theme.pallete.secondary.dark};
-  z-index: 1;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
-    height: 890px;
-  }
-`
-
-export const ImageBox = styled.main`
   display: flex;
   justify-content: center;
 
-  height: 100%;
+  height: 910px;
   width: 100%;
-
-  background-image: url('/backgrounds/waves_bottom.png');
-  background-size: cover;
-  background-attachment: fixed;
 
   ${({ theme }) =>
     theme.breakpoints.map(
@@ -38,7 +24,16 @@ export const ImageBox = styled.main`
         }
       `,
     )}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    height: 712px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[1].media}px) {
+    height: 544px;
+  }
 `
+
+export const ImageBox = styled.main``
 
 export const ContentBox = styled.div`
   display: flex;
@@ -65,7 +60,10 @@ export const HeadLine = styled.h1`
     font-size: 6.4rem;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
-    font-size: 5%.2;
+    font-size: 5.4rem;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[1].media}px) {
+    font-size: 4rem;
   }
 `
 
