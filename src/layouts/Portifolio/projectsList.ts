@@ -19,7 +19,7 @@ import FoodZillaLandingPagePreviewImage from 'assets/jobs/foodzilla-dashboard/me
 
 const projectsList: Array<IProjectResumeProps> = [
   {
-    id: '12',
+    id: '1',
     title: 'Foodzilla Dashboard',
     descriptionBlocks: [
       'This client was a delivery plataform requesting a dashboard so they paterns could menage they orders consuming they existing API.',
