@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
+import type { IContainerProps, ITextComponentsProps } from './styles'
+import Slide from 'components/Slide'
+
 import {
   Container,
   ContentBox,
@@ -8,9 +11,8 @@ import {
   ExpandImageButton,
   ProjectTitle,
   DescriptionText,
+  OpenMobileAssetsButton,
 } from './styles'
-import type { IContainerProps, ITextComponentsProps } from './styles'
-import Slide from 'components/Slide'
 
 export interface IProjectResumeProps
   extends IContainerProps,
@@ -74,6 +76,10 @@ export default function ProjectResume({
           />
         </ExpandImageButton>
       </PreviewBox>
+
+      <OpenMobileAssetsButton $marginTop={8} $textColor={$textColor}>
+        Show images
+      </OpenMobileAssetsButton>
     </Container>
   )
 }

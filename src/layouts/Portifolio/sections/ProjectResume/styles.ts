@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import TextButton from 'components/TextButton'
+
 export interface IContainerProps {
   $backgroundColor: HexaColorStringType
   $reverse?: boolean
@@ -39,6 +41,7 @@ const firstSectionStyle = css`
 export const Container = styled.section<IContainerProps>`
   display: flex;
   flex-direction: ${({ $reverse }) => ($reverse ? 'row-reverse' : 'row')};
+  align-items: center;
   height: 100vh;
   width: 100%;
 
@@ -47,13 +50,18 @@ export const Container = styled.section<IContainerProps>`
   z-index: 2;
 
   ${firstSectionStyle}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 32px;
+  }
 `
 
 export const ContentBox = styled.div<IContentBox>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   width: 50%;
 
   ${({ $isVisible }) =>
@@ -76,6 +84,10 @@ export const ContentBox = styled.div<IContentBox>`
         }
       `,
     )}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    width: 100%;
+  }
 `
 
 export const ProjectTitle = styled.h3<ITextComponentsProps>`
@@ -95,6 +107,10 @@ export const ProjectTitle = styled.h3<ITextComponentsProps>`
         }
       `,
     )};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
+    font-size: 3rem;
+  }
 `
 
 export const DescriptionText = styled.p<ITextComponentsProps>`
@@ -108,6 +124,10 @@ export const DescriptionText = styled.p<ITextComponentsProps>`
   &:not(:last-of-type) {
     margin-bottom: 12px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    font-size: 1.8rem;
+  }
 `
 
 export const PreviewBox = styled.div<IPreviewBox>`
@@ -120,6 +140,10 @@ export const PreviewBox = styled.div<IPreviewBox>`
 
   ${({ $isMaxSize }) => !$isMaxSize && 'width: 100%;'}
   transition: width 0.3s ease;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    display: none;
+  }
 `
 
 export const ExpandImageButton = styled.button<IExpandImageButton>`
@@ -156,5 +180,16 @@ export const ExpandImageButton = styled.button<IExpandImageButton>`
   img {
     width: 128px;
     height: 128px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    display: none;
+  }
+`
+
+export const OpenMobileAssetsButton = styled(TextButton)`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    display: block;
   }
 `

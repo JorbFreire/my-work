@@ -63,4 +63,9 @@ export const DotButton = styled.button<IDotButtonProps>`
   transition: opacity 0.2s;
   transition: transform 0.2s;
   transition: background-color 0.2s;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
+    width: 16px;
+    height: 16px;
+  }
 `

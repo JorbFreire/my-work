@@ -43,6 +43,7 @@ export const LogoPositionBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 66px;
+
   @media (max-width: ${({ theme }) => theme.breakpoints[5].media}px) {
     img {
       width: 48px;
@@ -50,8 +51,6 @@ export const LogoPositionBox = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     margin-top: 0px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
     order: 2;
   }
 `
@@ -87,8 +86,6 @@ export const Nav = styled.nav`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     margin: 0 16px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
     order: 1;
     width: fit-content;
     margin: 0;
@@ -99,9 +96,10 @@ export const PageLink = styled.a<PageLinkProps>`
   font-size: 2.4rem;
   color: ${({ theme }) => theme.pallete.grey.light};
   text-decoration: none;
-  ${({ onPage }) => onPage && onPageCSS}
+  ${({ onPage }) => onPage && onPageCSS}/*  */
 
-  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+  /* ! only usefull when more tabs added */
+  /* @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
     display: none;
-  }
+  } */
 `

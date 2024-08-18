@@ -3,8 +3,9 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 
 import { Textfield, Textarea } from 'components/Input'
+import TextButton from 'components/TextButton'
 
-import { Container, ContactBox, Title, Button, ArtBox } from './styles'
+import { Container, ContactBox, Title, ArtBox } from './styles'
 
 export default function Footer() {
   const [name, setName] = useState('')
@@ -58,7 +59,9 @@ export default function Footer() {
           onChange={(event) => setMessage(event.target.value)}
         />
 
-        <Button type="submit">Send message</Button>
+        <TextButton $marginTop={32} $alignAtEnd={true} type="submit">
+          Send message
+        </TextButton>
       </ContactBox>
       <ArtBox>
         <Image

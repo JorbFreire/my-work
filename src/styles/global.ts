@@ -13,9 +13,6 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  html, body, #__next {
-    height: 100%;
-  }
 
   body {
     background-color: ${({ theme }) => theme.pallete.secondary.dark};
@@ -25,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
     background-image: url('/backgrounds/waves_bottom.png');
     background-size: cover;
     background-attachment: fixed;
+
+    height: 100vh;
+    overflow: auto;
+    scroll-behavior: smooth;
   }
 
   body, input, button {

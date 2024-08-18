@@ -30,7 +30,7 @@ export default function Navbar() {
         <PageLink href="/services" onPage={false}>
           Services
         </PageLink> */}
-
+        <div />
         <PageLink href="#contact" onPage={false}>
           Contact
         </PageLink>

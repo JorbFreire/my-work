@@ -30,7 +30,7 @@ export const theme: themeType = {
     },
     {
       name: 'tablet-small',
-      media: 768,
+      media: 816,
     },
     {
       name: 'tablet-large',
@@ -46,9 +46,9 @@ export const theme: themeType = {
     },
   ],
   page: {
-    horizontal_padding: [8, 16, 16, 32, 64, 64, 128],
-    vertical_padding: [8, 8, 8, 16, 32, 32, 32],
-    external_radius: ['32px', '32px', '32px', '32px', '32px', '32px', '32px'],
+    horizontal_padding: [8, 16, 32, 32, 64, 64, 128],
+    vertical_padding: [8, 8, 16, 32, 32, 32, 32],
+    external_radius: ['16px', '16px', '16px', '16px', '32px', '32px', '32px'],
   },
   pallete: {
     primary: {

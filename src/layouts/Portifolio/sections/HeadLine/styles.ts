@@ -96,6 +96,9 @@ export const CallToAction = styled.h2<CallToActionProps>`
   @media (max-width: ${({ theme }) => theme.breakpoints[4].media}px) {
     font-size: 4.8rem;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints[3].media}px) {
+    font-size: 4rem;
+  }
 `
 
 export const AnimatedSpan = styled(CallToAction)`
